@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+*{
+    font-family: 'Ubuntu',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.light {
+    --font-color: #111;
+    --bg-color: #fff;
+}
+.dark {
+    --font-color: #eee;
+    --bg-color: #111;
+}
+body.dark {background-color: #292c35;}
+
+body.dark h1, body.dark .support a {color: #fff;}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #292c35;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.fa-moon {
+    color: #f1c40f;
+    font-size: medium;
+}
+
+.fa-sun {
+    color: #f39c12;
+    font-size: medium;
+}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+body{
+    background-color: var(--bg-color);
+    transition: background 0.2s linear;
+}
+header{
+    position: relative;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    position: relative;
+    color: var(--font-color);
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+}
+.group{
+    position: relative;
+    display: flex;
+}
+.group .nav{
+    vertical-align: middle;
+}
+.group .nav,
+.group .action{
+    display: flex;
+    justify-content: center;
+}
+.group ul li {
+    list-style: none;
+    font-size: 1.5rem;
+}
+.group ul li a{
+    color: var(--font-color);
+    text-decoration: none;
+    margin-left: 30px;
+}
+.group ul li a:hover{
+    color: #f0933cd0;
+}
+.group .action{
+    margin-left: 20px;
+    font-size: 1.5rem;
+}
+.group .action li a{
+    font-size: 1.25em;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    padding: 0 100px;
+}
+.banner .bg{
+    position: relative;
+    width: 100%;
+    height: 75vh;
+    background: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 70px 0;
+}
+.content h2{
+    position: relative;
+    color: var(--font-color);
+    font-size: 6em;
+    text-align: center;
+}
+.btn{
+    display: inline-block;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-size: 2em;
+    border-radius: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    color: var(--font-color);
+}
+.searchBox{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    padding: 30px 50px;
+    box-shadow: 0 5px 25px #f0933cd0;
+    transform: translateY(50%);
+}
+.searchBox .inputBox{
+    margin: 0 20px;
+}
+.searchBox .inputBox p{
+    color: #222;
+    margin-bottom: 10px;
+}
+.searchBox .inputBox #White{
+    color: #fff;
+}
+.searchBox .inputBox input{
+    border: 1px solid #222;
+    outline: none;
+    width: 100%;
+    font-size: 1.1em;
+    min-width: 150px;
+}
+.searchBox .inputBox input[type="submit"]{
+    outline: none;
+    border: none;
+    background: #f07503e3;
+    color: var(--font-color);
+    cursor: pointer;
+    letter-spacing: 2px;
+    padding: 15px;
+}
